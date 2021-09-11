@@ -65,9 +65,9 @@ def connDB() -> psycopg2.connect:
 
     user = os.getenv(key="user")
     password = os.getenv(key="key")
-    host = "btwoc.cmeppzyphi0z.us-east-1.rds.amazonaws.com"
+    host = os.getenv(key="dns")
     port = "5432"
-    dbname = "core"
+    dbname = "btwoc"
 
     conn = psycopg2.connect(
        dbname= dbname, user=user, password=password, host=host, port=port 
